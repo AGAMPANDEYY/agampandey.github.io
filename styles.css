@@ -89,3 +89,70 @@ h1.hero-title{font-size:clamp(28px,5vw,44px);font-weight:800;margin-bottom:8px}
 .footer-inner{display:flex;justify-content:space-between;align-items:center}
 .footer-links{display:flex;gap:14px}
 .footer-links a{text-decoration:none;color:var(--muted)}
+
+/* ---------- Header / Nav adjustments ---------- */
+.nav { justify-content: space-between; }
+.nav-left { width: 40px; } /* spacer so toggle stays at right */
+.nav-toggle{
+  display:block;
+  border:1px solid var(--border);
+  background:transparent;
+  font-size:30px;          /* bigger hamburger */
+  padding:8px 12px;        /* larger touch target */
+  line-height:1;
+}
+@media (min-width: 721px){
+  .nav-toggle{ display:none; } /* hide on desktop if you want */
+}
+
+/* ---------- Hero layout: image first, centered ---------- */
+.hero-center{
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: center;
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  gap: 12px;
+}
+.lead-narrow{ max-width: 680px; }
+
+/* round photo */
+.headshot.round{
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  box-shadow: 0 1px 0 rgba(0,0,0,.03);
+}
+
+/* ---------- Social icons row ---------- */
+.social-icons{
+  list-style:none;
+  display:flex;
+  gap: 14px;
+  padding:0;
+  margin: 8px 0 6px 0;
+}
+.social-icons li{ display:inline-flex; }
+.social-icons img{
+  width:24px; height:24px;
+  display:block;
+  filter: grayscale(100%);      /* professional black/white look */
+  opacity: .9;
+  transition: transform .1s ease, opacity .1s ease;
+}
+.social-icons a:hover img{
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+/* center CTAs under the bio */
+.cta-center{ justify-content:center; }
+
+/* optional: remove old 2-column grid on the hero section if present */
+#about .grid-2{ display:block; }
+
+/* ensure headings stay black per your scheme */
+h1,h2,h3{ color: var(--accent); }
