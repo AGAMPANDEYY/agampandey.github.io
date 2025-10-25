@@ -12,7 +12,6 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     const el = document.getElementById(id);
     if (el) {
       e.preventDefault();
-      // Offset for sticky header
       const headerOffset = 56;
       const elementPosition = el.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
@@ -22,14 +21,38 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
         behavior: 'smooth'
       });
       
-      // Close mobile menu if open
       links?.classList.remove('open');
     }
   });
 });
 
-// Footer year
-document.getElementById('year').textContent = new Date().getFullYear();
+// Active section highlighting in navigation
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-link');
+
+function updateActiveNav() {
+  const scrollPos = window.scrollY + 100; // Offset for better UX
+  
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.offsetHeight;
+    const sectionId = section.getAttribute('id');
+    
+    if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${sectionId}`) {
+          link.classList.add('active');
+        }
+      });
+    }
+  });
+}
+
+// Update on scroll
+window.addEventListener('scroll', updateActiveNav);
+// Update on load
+window.addEventListener('load', updateActiveNav);
 
 // Close mobile menu when clicking outside
 document.addEventListener('click', (e) => {
@@ -39,3 +62,6 @@ document.addEventListener('click', (e) => {
     }
   }
 });
+
+// Footer year
+document.getElementById('year').textContent = new Date().getFullYear();
