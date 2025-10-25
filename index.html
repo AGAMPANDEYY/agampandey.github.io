@@ -16,12 +16,12 @@
     <div class="nav-left"></div>
     <button class="nav-toggle" aria-label="Open navigation" title="Menu">☰</button>
     <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#publications">Publications</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#awards">Awards</a></li>
-      <li><a class="btn btn-outline" href="#cv">CV</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#publications" class="nav-link">Publications</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#experience" class="nav-link">Experience</a></li>
+      <li><a href="#awards" class="nav-link">Awards</a></li>
+      <li><a href="#cv" class="nav-link">CV</a></li>
     </ul>
   </nav>
 </header>
@@ -78,50 +78,59 @@
   <div class="container">
     <h2>Research & Publications</h2>
 
-    <div class="pub-year"><h3>2025</h3>
-      <ul class="pub-list">
-        <li class="pub-item">
-          <div class="pub-title">
-            <a href="https://openreview.net/forum?id=UpCzCC4hCn" target="_blank">CroPA++ – Exposing Vulnerabilities in Vision-Language Models</a>
+    <div class="pub-year">
+      <h3>2025</h3>
+      <ul class="clean-list">
+        <li>
+          <div class="item-header">
+            <span class="item-title">CroPA++ – Exposing Vulnerabilities in Vision-Language Models</span>
             <span class="venue-badge">NeurIPS Reliable ML Workshop 2025</span>
           </div>
-          <div class="pub-authors">A. Pandey et al.</div>
-          <div class="pub-links">
-            <a class="chip" href="https://neurips.cc/virtual/2025/workshop/109580">Workshop Site</a>
-            <a class="chip" href="https://openreview.net/pdf?id=gKtyvblq0Y">Paper</a>
+          <div class="item-meta">A. Pandey et al.</div>
+          <div class="item-links">
+            <a href="https://neurips.cc/virtual/2025/workshop/109580" target="_blank" rel="noopener">Workshop</a>
+            <a href="https://openreview.net/pdf?id=gKtyvblq0Y" target="_blank" rel="noopener">Paper</a>
+            <a href="https://openreview.net/forum?id=UpCzCC4hCn" target="_blank" rel="noopener">OpenReview</a>
           </div>
         </li>
-        <li class="pub-item">
-          <div class="pub-title">
-            <a href="https://openreview.net/forum?id=5L90cl0xtf" target="_blank">Revisiting CroPA – Enhancing Cross-Prompt Adversarial Transferability</a>
-            <span class="venue-badge">TMLR / MLRC 2025 (Best Paper)</span>
+        
+        <li>
+          <div class="item-header">
+            <span class="item-title">Revisiting CroPA – Enhancing Cross-Prompt Adversarial Transferability</span>
+            <span class="venue-badge best-paper">TMLR / MLRC 2025 (Best Paper)</span>
           </div>
-          <div class="pub-authors">A. Pandey et al.</div>
-          <div class="pub-links">
-            <a class="chip" href="https://reproml.org/">RepoML</a>
-            <a class="chip" href="https://jmlr.org/tmlr/">TMLR</a>
-            <a class="chip" href="#">Slides</a>
+          <div class="item-meta">A. Pandey et al.</div>
+          <div class="item-links">
+            <a href="https://openreview.net/forum?id=5L90cl0xtf" target="_blank" rel="noopener">Paper</a>
+            <a href="https://reproml.org/" target="_blank" rel="noopener">RepoML</a>
+            <a href="https://jmlr.org/tmlr/" target="_blank" rel="noopener">TMLR</a>
           </div>
         </li>
-        <li class="pub-item">
-          <div class="pub-title">StegGNN – Learning Graphical Representation for Image Steganography
+        
+        <li>
+          <div class="item-header">
+            <span class="item-title">StegGNN – Learning Graphical Representation for Image Steganography</span>
             <span class="venue-badge">ICCV CV4DC Workshop (under revision)</span>
           </div>
-          <div class="pub-links">
-            <a class="chip" href="https://openreview.net/forum?id=UpCzCC4hCn">Manuscript</a>
-            <a class="chip" href="https://github.com/AGAMPANDEYY/StegGNN">Code</a>
+          <div class="item-links">
+            <a href="https://openreview.net/forum?id=UpCzCC4hCn" target="_blank" rel="noopener">Manuscript</a>
+            <a href="https://github.com/AGAMPANDEYY/StegGNN" target="_blank" rel="noopener">Code</a>
           </div>
         </li>
-        <li class="pub-item">
-          <div class="pub-title">Zero-Shot Vision-Language Reasoning via Dual-Layer Scene Graph CoT
+        
+        <li>
+          <div class="item-header">
+            <span class="item-title">Zero-Shot Vision-Language Reasoning via Dual-Layer Scene Graph CoT</span>
             <span class="venue-badge">AAAI-26 Student Abstract</span>
           </div>
-          <div class="pub-links">
-            <a class="chip" href="https://aaai.org/conference/aaai/aaai-26/student-abstract-and-poster-program-call/">Paper</a>
+          <div class="item-links">
+            <a href="https://aaai.org/conference/aaai/aaai-26/student-abstract-and-poster-program-call/" target="_blank" rel="noopener">Conference</a>
           </div>
         </li>
-        <li class="pub-item">
-          <div class="pub-title">TransPatch – Universal Adversarial Patch for ViT–CNN Cross-Architecture Transfer
+        
+        <li>
+          <div class="item-header">
+            <span class="item-title">TransPatch – Universal Adversarial Patch for ViT–CNN Cross-Architecture Transfer</span>
             <span class="venue-badge">AAAI-26 Student Abstract</span>
           </div>
         </li>
@@ -134,26 +143,57 @@
 <section id="projects" class="section">
   <div class="container">
     <h2>Projects</h2>
-    <ul class="pub-list">
-      <li class="pub-item">
-        <div class="pub-title"><a href="https://github.com/AGAMPANDEYY/ByeLabs" target="_blank">ByeLabs — Local-First Multi-Agent AI for Roster Processing</a></div>
-        <p>Hi-Labs AIQuest Hackathon Finalist · Fine-tuned SLM (Qwen3-4B) for schema-aware document extraction and audit-ready local AI pipeline with Prometheus monitoring.</p>
+    <ul class="clean-list">
+      <li>
+        <div class="item-header">
+          <span class="item-title">ByeLabs — Local-First Multi-Agent AI for Roster Processing</span>
+          <span class="project-meta">Hi-Labs AIQuest Hackathon Finalist</span>
+        </div>
+        <p class="item-desc">Fine-tuned SLM (Qwen3-4B) for schema-aware document extraction and audit-ready local AI pipeline with Prometheus monitoring.</p>
+        <div class="item-links">
+          <a href="https://github.com/AGAMPANDEYY/ByeLabs" target="_blank" rel="noopener">GitHub</a>
+        </div>
       </li>
-      <li class="pub-item">
-        <div class="pub-title"><a href="https://github.com/AGAMPANDEYY/zomato_nugget" target="_blank">Multimodal Agentic GraphRAG (Zomato Nugget)</a></div>
-        <p>HybridRAG chatbot combining Weaviate + Neo4j with LangChain ReAct agent; Docker + FastAPI deployment with LangFuse observability.</p>
+      
+      <li>
+        <div class="item-header">
+          <span class="item-title">Multimodal Agentic GraphRAG (Zomato Nugget)</span>
+        </div>
+        <p class="item-desc">HybridRAG chatbot combining Weaviate + Neo4j with LangChain ReAct agent; Docker + FastAPI deployment with LangFuse observability.</p>
+        <div class="item-links">
+          <a href="https://github.com/AGAMPANDEYY/zomato_nugget" target="_blank" rel="noopener">GitHub</a>
+        </div>
       </li>
-      <li class="pub-item">
-        <div class="pub-title"><a href="https://github.com/AGAMPANDEYY/vehicle_trajectory_prediction" target="_blank">Spatiotemporal Attention for Trajectory Prediction</a></div>
-        <p>SDT-ATT model for highway trajectory forecasting with social tensors and temporal attention; enabled multi-agent collision avoidance.</p>
+      
+      <li>
+        <div class="item-header">
+          <span class="item-title">Spatiotemporal Attention for Trajectory Prediction</span>
+        </div>
+        <p class="item-desc">SDT-ATT model for highway trajectory forecasting with social tensors and temporal attention; enabled multi-agent collision avoidance.</p>
+        <div class="item-links">
+          <a href="https://github.com/AGAMPANDEYY/vehicle_trajectory_prediction" target="_blank" rel="noopener">GitHub</a>
+        </div>
       </li>
-      <li class="pub-item">
-        <div class="pub-title"><a href="https://github.com/AGAMPANDEYY/StegGNN" target="_blank">StegGNN — Graph Neural Network for Image Steganography</a></div>
-        <p>Achieved 40.46 dB PSNR and 0.96 SSIM; outperformed CNN methods on imperceptibility metrics.</p>
+      
+      <li>
+        <div class="item-header">
+          <span class="item-title">StegGNN — Graph Neural Network for Image Steganography</span>
+        </div>
+        <p class="item-desc">Achieved 40.46 dB PSNR and 0.96 SSIM; outperformed CNN methods on imperceptibility metrics.</p>
+        <div class="item-links">
+          <a href="https://github.com/AGAMPANDEYY/StegGNN" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://openreview.net/forum?id=UpCzCC4hCn" target="_blank" rel="noopener">Paper</a>
+        </div>
       </li>
-      <li class="pub-item">
-        <div class="pub-title"><a href="https://github.com/AGAMPANDEYY/VQA_YOLO_Dsg" target="_blank">Vision-Language Model Fusion with YOLOv8s</a></div>
-        <p>Integrated object detection and VLM Q/A for visual reasoning using LLaVA-13B and custom Flask API.</p>
+      
+      <li>
+        <div class="item-header">
+          <span class="item-title">Vision-Language Model Fusion with YOLOv8s</span>
+        </div>
+        <p class="item-desc">Integrated object detection and VLM Q/A for visual reasoning using LLaVA-13B and custom Flask API.</p>
+        <div class="item-links">
+          <a href="https://github.com/AGAMPANDEYY/VQA_YOLO_Dsg" target="_blank" rel="noopener">GitHub</a>
+        </div>
       </li>
     </ul>
   </div>
@@ -163,26 +203,60 @@
 <section id="experience" class="section">
   <div class="container">
     <h2>Experience</h2>
-    <ul class="card-list">
-      <li class="card"><div class="card-title">AI Intern — Swiggy (CEO's Office)</div>
-        <div class="card-subtitle">Bangalore · May–Aug 2025</div>
-        <p>Built multi-agent assistant for Swiggy Scenes using Cimba AI and LangGraph; integrated autonomous booking and CRM automation with Docker CI/CD deployment.</p>
+    <ul class="clean-list experience-list">
+      <li>
+        <div class="exp-header">
+          <img src="assets/logos/swiggy.png" alt="Swiggy" class="company-logo">
+          <div class="exp-title-group">
+            <div class="item-title">AI Intern — Swiggy (CEO's Office)</div>
+            <div class="item-meta">Bangalore · May–Aug 2025</div>
+          </div>
+        </div>
+        <p class="item-desc">Built multi-agent assistant for Swiggy Scenes using Cimba AI and LangGraph; integrated autonomous booking and CRM automation with Docker CI/CD deployment.</p>
       </li>
-      <li class="card"><div class="card-title">AI Engineer Intern — Akki AI</div>
-        <div class="card-subtitle">Remote (New Delhi) · Dec 2024–Apr 2025</div>
-        <p>Designed Hybrid-RAG multi-agent framework with CrewAI + LangGraph and RLHF-based agent evaluation pipelines on AWS EC2 clusters.</p>
+      
+      <li>
+        <div class="exp-header">
+          <img src="assets/logos/akki.png" alt="Akki AI" class="company-logo">
+          <div class="exp-title-group">
+            <div class="item-title">AI Engineer Intern — Akki AI</div>
+            <div class="item-meta">Remote (New Delhi) · Dec 2024–Apr 2025</div>
+          </div>
+        </div>
+        <p class="item-desc">Designed Hybrid-RAG multi-agent framework with CrewAI + LangGraph and RLHF-based agent evaluation pipelines on AWS EC2 clusters.</p>
       </li>
-      <li class="card"><div class="card-title">AI Engineer Intern — EzAIx Inc.</div>
-        <div class="card-subtitle">Remote (Florida US) · Mar–Apr 2025</div>
-        <p>Developed multi-agent onboarding assistant with GPT-4 Vision and OpenAI CUA; integrated RAG retrieval and real-time HCI automation.</p>
+      
+      <li>
+        <div class="exp-header">
+          <img src="assets/logos/ezaix.png" alt="EzAIx" class="company-logo">
+          <div class="exp-title-group">
+            <div class="item-title">AI Engineer Intern — EzAIx Inc.</div>
+            <div class="item-meta">Remote (Florida US) · Mar–Apr 2025</div>
+          </div>
+        </div>
+        <p class="item-desc">Developed multi-agent onboarding assistant with GPT-4 Vision and OpenAI CUA; integrated RAG retrieval and real-time HCI automation.</p>
       </li>
-      <li class="card"><div class="card-title">Data Science Intern — Mindshift Analytics</div>
-        <div class="card-subtitle">Remote · Aug–Oct 2024</div>
-        <p>Built trajectory analysis for mining vehicles using RDP + DBSCAN for anomaly detection on large-scale GIS datasets.</p>
+      
+      <li>
+        <div class="exp-header">
+          <img src="assets/logos/mindshift.png" alt="Mindshift Analytics" class="company-logo">
+          <div class="exp-title-group">
+            <div class="item-title">Data Science Intern — Mindshift Analytics</div>
+            <div class="item-meta">Remote · Aug–Oct 2024</div>
+          </div>
+        </div>
+        <p class="item-desc">Built trajectory analysis for mining vehicles using RDP + DBSCAN for anomaly detection on large-scale GIS datasets.</p>
       </li>
-      <li class="card"><div class="card-title">Software Development Intern — Strabag Efkon India</div>
-        <div class="card-subtitle">Gurgaon · Jun–Jul 2024</div>
-        <p>Developed Fleet Optimization tool using ML + Linear Programming (PuLP) for Hyderabad-ORR emergency response planning.</p>
+      
+      <li>
+        <div class="exp-header">
+          <img src="assets/logos/strabag.png" alt="Strabag Efkon" class="company-logo">
+          <div class="exp-title-group">
+            <div class="item-title">Software Development Intern — Strabag Efkon India</div>
+            <div class="item-meta">Gurgaon · Jun–Jul 2024</div>
+          </div>
+        </div>
+        <p class="item-desc">Developed Fleet Optimization tool using ML + Linear Programming (PuLP) for Hyderabad-ORR emergency response planning.</p>
       </li>
     </ul>
   </div>
@@ -192,17 +266,26 @@
 <section id="awards" class="section">
   <div class="container">
     <h2>Extra Curricular</h2>
-    <ul class="card-list">
-      <li class="card"><div class="card-title">Program Committee Member — AAAI 2026</div><div class="card-subtitle">Student Abstract and Poster Program (SAPP)</div></li>
-      <li class="card"><div class="card-title">Joint Secretary — Data Science Group IIT Roorkee</div></li>
-      <li class="card"><div class="card-title">Vice President (Analytics) — SocBiz IIT Roorkee</div></li>
-      <li class="card"><div class="card-title">Institute Athletics Team — Gold (5000 m, 1500 m)</div></li>
+    <ul class="clean-list">
+      <li>
+        <div class="item-title">Program Committee Member — AAAI 2026</div>
+        <div class="item-meta">Student Abstract and Poster Program (SAPP)</div>
+      </li>
+      <li>
+        <div class="item-title">Joint Secretary — Data Science Group IIT Roorkee</div>
+      </li>
+      <li>
+        <div class="item-title">Vice President (Analytics) — SocBiz IIT Roorkee</div>
+      </li>
+      <li>
+        <div class="item-title">Institute Athletics Team — Gold (5000 m, 1500 m)</div>
+      </li>
     </ul>
   </div>
 </section>
 
 <!-- CV VIEWER -->
-<section id="cv" class="section">
+<section id="cv" class="section cv-section">
   <div class="container">
     <div class="cv-header">
       <h2>Curriculum Vitae</h2>
@@ -216,7 +299,7 @@
       </a>
     </div>
     <div class="cv-viewer">
-      <iframe src="assets/AgamPandey_DS.pdf" title="Agam Pandey CV"></iframe>
+      <iframe src="assets/AgamPandey_DS.pdf#view=FitH" title="Agam Pandey CV"></iframe>
     </div>
   </div>
 </section>
