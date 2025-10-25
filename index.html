@@ -13,15 +13,15 @@
 
 <header class="site-header">
   <nav class="container nav">
-    <div class="nav-left"></div> <!-- empty: no repeated name/logo -->
+    <div class="nav-left"></div>
     <button class="nav-toggle" aria-label="Open navigation" title="Menu">☰</button>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#publications">Publications</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#experience">Experience</a></li>
-      <li><a href="#awards">Awards & Activities</a></li>
-      <li><a class="btn btn-outline" href="assets/AgamPandey_DS.pdf" target="_blank" rel="noopener">CV</a></li>
+      <li><a href="#awards">Awards</a></li>
+      <li><a class="btn btn-outline" href="#cv">CV</a></li>
     </ul>
   </nav>
 </header>
@@ -29,19 +29,15 @@
 <!-- ABOUT -->
 <section id="about" class="section">
   <div class="container hero-center">
-    <!-- 1) Image first -->
     <img src="assets/IMG_0303.jpeg" alt="Agam Pandey portrait" class="headshot round">
-
-    <!-- 2) Name under image -->
     <h1 class="hero-title">Agam Pandey</h1>
     <p class="hero-subtitle">AI Researcher  •  AI Engineer</p>
 
     <p class="lead lead-narrow">
-      Final-year Undergraduate at IIT Roorkee,India, working on robust multimodal AI,
-      Causal Reasoning in VLMs, Graph Embeddings , agentic systems, hybrid-RAG, Adversarial ML and Computer Vision for Autonomous Perception.
+      Final-year Undergraduate at IIT Roorkee, India, working on robust multimodal AI,
+      Causal Reasoning in VLMs, Graph Embeddings, agentic systems, hybrid-RAG, Adversarial ML and Computer Vision for Autonomous Perception.
     </p>
 
-    <!-- 3) Icon logos instead of text links -->
     <ul class="social-icons" aria-label="Profiles and contact">
       <li>
         <a href="mailto:agam.pandeyy@gmail.com" title="Email">
@@ -72,7 +68,7 @@
 
     <div class="cta-row cta-center">
       <a class="btn btn-solid" href="#publications">View Publications</a>
-      <a class="btn btn-outline" href="assets/AgamPandey_DS.pdf" target="_blank" rel="noopener">Download CV</a>
+      <a class="btn btn-outline" href="#cv">View CV</a>
     </div>
   </div>
 </section>
@@ -134,35 +130,6 @@
   </div>
 </section>
 
-<!-- EXPERIENCE -->
-<section id="experience" class="section">
-  <div class="container">
-    <h2>Experience</h2>
-    <ul class="card-list">
-      <li class="card"><div class="card-title">AI Intern — Swiggy (CEO’s Office)</div>
-        <div class="card-subtitle">Bangalore · May–Aug 2025</div>
-        <p>Built multi-agent assistant for Swiggy Scenes using Cimba AI and LangGraph; integrated autonomous booking and CRM automation with Docker CI/CD deployment.</p>
-      </li>
-      <li class="card"><div class="card-title">AI Engineer Intern — Akki AI</div>
-        <div class="card-subtitle">Remote (New Delhi) · Dec 2024–Apr 2025</div>
-        <p>Designed Hybrid-RAG multi-agent framework with CrewAI + LangGraph and RLHF-based agent evaluation pipelines on AWS EC2 clusters.</p>
-      </li>
-      <li class="card"><div class="card-title">AI Engineer Intern — EzAIx Inc.</div>
-        <div class="card-subtitle">Remote (Florida US) · Mar–Apr 2025</div>
-        <p>Developed multi-agent onboarding assistant with GPT-4 Vision and OpenAI CUA; integrated RAG retrieval and real-time HCI automation.</p>
-      </li>
-      <li class="card"><div class="card-title">Data Science Intern — Mindshift Analytics</div>
-        <div class="card-subtitle">Remote · Aug–Oct 2024</div>
-        <p>Built trajectory analysis for mining vehicles using RDP + DBSCAN for anomaly detection on large-scale GIS datasets.</p>
-      </li>
-      <li class="card"><div class="card-title">Software Development Intern — Strabag Efkon India</div>
-        <div class="card-subtitle">Gurgaon · Jun–Jul 2024</div>
-        <p>Developed Fleet Optimization tool using ML + Linear Programming (PuLP) for Hyderabad-ORR emergency response planning.</p>
-      </li>
-    </ul>
-  </div>
-</section>
-
 <!-- PROJECTS -->
 <section id="projects" class="section">
   <div class="container">
@@ -192,6 +159,35 @@
   </div>
 </section>
 
+<!-- EXPERIENCE -->
+<section id="experience" class="section">
+  <div class="container">
+    <h2>Experience</h2>
+    <ul class="card-list">
+      <li class="card"><div class="card-title">AI Intern — Swiggy (CEO's Office)</div>
+        <div class="card-subtitle">Bangalore · May–Aug 2025</div>
+        <p>Built multi-agent assistant for Swiggy Scenes using Cimba AI and LangGraph; integrated autonomous booking and CRM automation with Docker CI/CD deployment.</p>
+      </li>
+      <li class="card"><div class="card-title">AI Engineer Intern — Akki AI</div>
+        <div class="card-subtitle">Remote (New Delhi) · Dec 2024–Apr 2025</div>
+        <p>Designed Hybrid-RAG multi-agent framework with CrewAI + LangGraph and RLHF-based agent evaluation pipelines on AWS EC2 clusters.</p>
+      </li>
+      <li class="card"><div class="card-title">AI Engineer Intern — EzAIx Inc.</div>
+        <div class="card-subtitle">Remote (Florida US) · Mar–Apr 2025</div>
+        <p>Developed multi-agent onboarding assistant with GPT-4 Vision and OpenAI CUA; integrated RAG retrieval and real-time HCI automation.</p>
+      </li>
+      <li class="card"><div class="card-title">Data Science Intern — Mindshift Analytics</div>
+        <div class="card-subtitle">Remote · Aug–Oct 2024</div>
+        <p>Built trajectory analysis for mining vehicles using RDP + DBSCAN for anomaly detection on large-scale GIS datasets.</p>
+      </li>
+      <li class="card"><div class="card-title">Software Development Intern — Strabag Efkon India</div>
+        <div class="card-subtitle">Gurgaon · Jun–Jul 2024</div>
+        <p>Developed Fleet Optimization tool using ML + Linear Programming (PuLP) for Hyderabad-ORR emergency response planning.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
 <!-- AWARDS / ACTIVITIES -->
 <section id="awards" class="section">
   <div class="container">
@@ -202,6 +198,26 @@
       <li class="card"><div class="card-title">Vice President (Analytics) — SocBiz IIT Roorkee</div></li>
       <li class="card"><div class="card-title">Institute Athletics Team — Gold (5000 m, 1500 m)</div></li>
     </ul>
+  </div>
+</section>
+
+<!-- CV VIEWER -->
+<section id="cv" class="section">
+  <div class="container">
+    <div class="cv-header">
+      <h2>Curriculum Vitae</h2>
+      <a class="btn btn-outline btn-small" href="assets/AgamPandey_DS.pdf" download>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+        Download PDF
+      </a>
+    </div>
+    <div class="cv-viewer">
+      <iframe src="assets/AgamPandey_DS.pdf" title="Agam Pandey CV"></iframe>
+    </div>
   </div>
 </section>
 
