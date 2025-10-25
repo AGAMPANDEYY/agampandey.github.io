@@ -10,56 +10,69 @@
 </head>
 
 <body>
+
 <header class="site-header">
   <nav class="container nav">
-    <a href="#about" class="nav-brand">Agam Pandey</a>
-    <button class="nav-toggle" aria-label="menu">☰</button>
+    <div class="nav-left"></div> <!-- empty: no repeated name/logo -->
+    <button class="nav-toggle" aria-label="Open navigation" title="Menu">☰</button>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#publications">Publications</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#awards">Awards & Activities</a></li>
-      <li><a class="btn btn-outline" href="assets/Agam_Pandey_CV.pdf" target="_blank">CV</a></li>
+      <li><a class="btn btn-outline" href="assets/AgamPandey_DS.pdf" target="_blank" rel="noopener">CV</a></li>
     </ul>
   </nav>
 </header>
 
 <!-- ABOUT -->
 <section id="about" class="section">
-  <div class="container grid-2">
-    <div>
-      <h1 class="hero-title">Agam Pandey</h1>
-      <p class="hero-subtitle">AI Researcher  •  AI Engineer</p>
-      <p class="lead">
-        Final-year B.Tech (Civil Engineering) student at 
-        <strong>IIT Roorkee</strong> passionate about robust multimodal AI,
-        agentic systems, and computer-vision / language integration.
-        My work spans hybrid-RAG architectures, and
-        adversarial robustness in VLMs.
-      </p>
-      <div class="quick-links">
-        <a class="link" href="mailto:agam.pandeyy@gmail.com">agam.pandeyy@gmail.com</a>
-        <span class="dot">•</span>
-        <a class="link" href="https://www.linkedin.com/in/agam-pandey-326161223/" target="_blank">LinkedIn</a>
-        <span class="dot">•</span>
-        <a class="link" href="https://github.com/AGAMPANDEYY" target="_blank">GitHub</a>
-        <span class="dot">•</span>
-        <a class="link" href="https://scholar.google.com" target="_blank">Google Scholar</a>
-        <span class="dot">•</span>
-        <a class="link" href="https://x.com/repro_challenge/status/1954935709380247575" target="_blank">X / Twitter</a>
-      </div>
-      <div class="cta-row">
-        <a class="btn btn-solid" href="#publications">View Publications</a>
-        <a class="btn btn-outline" href="assets/AgamPandey_DS.pdf" target="_blank">Download CV</a>
-      </div>
-    </div>
-    <div class="hero-media">
-      <img src="assets/IMG_0303.jpeg" alt="Agam Pandey portrait" class="headshot">
-      <div class="logo-strip">
-        <img src="assets/logo_iitr.png" alt="IIT Roorkee">
-        <img src="assets/logo_dsg.png" alt="Data Science Group IITR">
-      </div>
+  <div class="container hero-center">
+    <!-- 1) Image first -->
+    <img src="assets/IMG_0303.jpeg" alt="Agam Pandey portrait" class="headshot round">
+
+    <!-- 2) Name under image -->
+    <h1 class="hero-title">Agam Pandey</h1>
+    <p class="hero-subtitle">AI Researcher  •  AI Engineer</p>
+
+    <p class="lead lead-narrow">
+      Final-year B.Tech (Civil Engineering) at <strong>IIT Roorkee</strong>, working on robust multimodal AI,
+      agentic systems, hybrid-RAG, and adversarial robustness in VLMs.
+    </p>
+
+    <!-- 3) Icon logos instead of text links -->
+    <ul class="social-icons" aria-label="Profiles and contact">
+      <li>
+        <a href="mailto:agam.pandeyy@gmail.com" title="Email">
+          <img src="assets/icons/mail.svg" alt="Email icon">
+        </a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/agam-pandey-326161223/" target="_blank" rel="noopener" title="LinkedIn">
+          <img src="assets/icons/linkedin.svg" alt="LinkedIn icon">
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/AGAMPANDEYY" target="_blank" rel="noopener" title="GitHub">
+          <img src="assets/icons/github.svg" alt="GitHub icon">
+        </a>
+      </li>
+      <li>
+        <a href="https://scholar.google.com" target="_blank" rel="noopener" title="Google Scholar">
+          <img src="assets/icons/scholar.svg" alt="Google Scholar icon">
+        </a>
+      </li>
+      <li>
+        <a href="https://openreview.net" target="_blank" rel="noopener" title="OpenReview">
+          <img src="assets/icons/openreview.svg" alt="OpenReview icon">
+        </a>
+      </li>
+    </ul>
+
+    <div class="cta-row cta-center">
+      <a class="btn btn-solid" href="#publications">View Publications</a>
+      <a class="btn btn-outline" href="assets/AgamPandey_DS.pdf" target="_blank" rel="noopener">Download CV</a>
     </div>
   </div>
 </section>
