@@ -1,0 +1,91 @@
+:root{
+  --bg:#ffffff;
+  --text:#111111;
+  --muted:#666666;
+  --accent:#000000; /* black buttons / headings */
+  --border:#e6e6e6;
+  --chip:#f4f4f4;
+  --container: 1040px;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  line-height:1.6;
+}
+
+/* Layout */
+.container{max-width:var(--container);margin:0 auto;padding:0 20px}
+.section{padding:64px 0}
+.grid-2{display:grid;grid-template-columns:1.2fr .8fr;gap:32px}
+@media (max-width: 900px){.grid-2{grid-template-columns:1fr}}
+
+h1,h2,h3{color:var(--accent);margin:0 0 16px 0;line-height:1.2}
+h1.hero-title{font-size:clamp(28px,5vw,44px);font-weight:800;margin-bottom:8px}
+.hero-subtitle{font-weight:600;color:var(--muted);margin:0 0 16px 0}
+.lead{font-size:1.05rem;color:#222}
+
+/* Header / Nav */
+.site-header{
+  position:sticky;top:0;z-index:10;background:rgba(255,255,255,.96);
+  border-bottom:1px solid var(--border);backdrop-filter:saturate(180%) blur(8px);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;height:60px}
+.nav-brand{font-weight:800;color:var(--accent);text-decoration:none}
+.nav-links{display:flex;gap:18px;list-style:none;margin:0;padding:0;align-items:center}
+.nav-links a{color:var(--text);text-decoration:none}
+.nav-links a:hover{text-decoration:underline}
+.nav-toggle{display:none;border:1px solid var(--border);background:transparent}
+@media (max-width: 720px){
+  .nav-toggle{display:block}
+  .nav-links{display:none;position:absolute;top:60px;left:0;right:0;background:#fff;
+    border-bottom:1px solid var(--border);padding:12px 20px;flex-direction:column;align-items:flex-start}
+  .nav-links.open{display:flex}
+}
+
+/* Buttons */
+.btn{display:inline-block;padding:10px 16px;border:1px solid var(--accent);
+  text-decoration:none;font-weight:600;border-radius:6px}
+.btn-solid{background:var(--accent);color:#fff}
+.btn-outline{background:transparent;color:var(--accent)}
+.btn:hover{transform:translateY(-1px)}
+
+/* Quick links */
+.quick-links{display:flex;flex-wrap:wrap;gap:8px 12px;color:var(--muted);margin:14px 0}
+.quick-links .link{color:var(--text);text-decoration:none;border-bottom:1px dotted var(--border)}
+.quick-links .dot{color:var(--muted)}
+
+/* Hero media */
+.hero-media{display:flex;flex-direction:column;align-items:center;gap:14px}
+.headshot{width:220px;height:220px;object-fit:cover;border-radius:12px;border:1px solid var(--border)}
+.logo-strip{display:flex;gap:12px;opacity:.8;filter:grayscale(100%)}
+.logo-strip img{height:28px}
+
+/* Publications */
+.pub-year{margin-top:28px}
+.pub-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:18px}
+.pub-item{padding:14px 16px;border:1px solid var(--border);border-radius:8px;background:#fff}
+.pub-title{font-weight:600;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.pub-title a{color:var(--text);text-decoration:none}
+.venue-badge{font-size:.8rem;border:1px solid var(--accent);border-radius:999px;padding:2px 8px}
+.pub-authors{color:var(--muted);margin-top:6px}
+.pub-links{margin-top:8px;display:flex;flex-wrap:wrap;gap:8px}
+.chip{display:inline-block;padding:6px 10px;background:var(--chip);border:1px solid var(--border);
+  border-radius:999px;text-decoration:none;color:var(--text);font-size:.9rem}
+
+/* Awards + Service */
+.card-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.card{padding:16px;border:1px solid var(--border);border-radius:8px;background:#fff}
+.card-title{font-weight:700}
+.card-subtitle{color:var(--muted)}
+
+.service-list{list-style:disc;margin-left:20px}
+
+/* Footer */
+.site-footer{border-top:1px solid var(--border);padding:20px 0;background:#fff}
+.footer-inner{display:flex;justify-content:space-between;align-items:center}
+.footer-links{display:flex;gap:14px}
+.footer-links a{text-decoration:none;color:var(--muted)}
