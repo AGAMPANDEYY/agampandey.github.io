@@ -431,4 +431,44 @@ h3{font-size:1.3rem;font-weight:600;margin-bottom:16px}
   .pub-thumb img { aspect-ratio: 16 / 9; }
 }
 
+/* Scrollable News list */
+.news-list,
+.news-list.scrollable {
+  max-height: 320px;         /* adjust to taste */
+  overflow-y: auto;
+  padding-right: .5rem;      /* breathing room near scrollbar */
+  margin: 0;
+  list-style: none;
+  scrollbar-gutter: stable;  /* avoids layout shift when scrollbar appears */
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 12px;
+  background: #fff;
+}
+
+/* Optional: make each item comfy */
+.news-list li {
+  padding: .75rem 1rem;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+.news-list li:last-child { border-bottom: 0; }
+.news-date { color: #57606a; white-space: nowrap; margin-right: .35rem; }
+
+/* Minimal custom scrollbars */
+.news-list {
+  scrollbar-width: thin;                     /* Firefox */
+  scrollbar-color: #c7cbd1 transparent;      /* Firefox */
+}
+.news-list::-webkit-scrollbar { width: 8px; }
+.news-list::-webkit-scrollbar-track { background: transparent; }
+.news-list::-webkit-scrollbar-thumb {
+  background: #c7cbd1;
+  border-radius: 999px;
+}
+.news-list::-webkit-scrollbar-thumb:hover { background: #aeb4bc; }
+
+/* Responsive: shorter panel on small screens */
+@media (max-width: 720px) {
+  .news-list,
+  .news-list.scrollable { max-height: 240px; }
+}
 
