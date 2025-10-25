@@ -65,3 +65,32 @@ document.addEventListener('click', (e) => {
 
 // Footer year
 document.getElementById('year').textContent = new Date().getFullYear();
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const cards = document.querySelectorAll('[data-scroll]');
+
+  cards.forEach(card => {
+    const scroller = card.querySelector('.news-list');
+    if (!scroller) return;
+
+    const update = () => {
+      const { scrollTop, scrollHeight, clientHeight } = scroller;
+      const atTop = scrollTop <= 0;
+      const atBottom = Math.ceil(scrollTop + clientHeight) >= scrollHeight;
+
+      // mark whether it actually overflows
+      const isScrollable = scrollHeight > clientHeight + 1;
+      card.classList.toggle('is-scrollable', isScrollable);
+
+      card.classList.toggle('at-top', atTop);
+      card.classList.toggle('at-bottom', atBottom);
+      if (scrollTop > 2) card.classList.add('scrolled');
+    };
+
+    scroller.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    update(); // initial
+  });
+});
+
