@@ -66,6 +66,31 @@ document.addEventListener('click', (e) => {
 // Footer year
 document.getElementById('year').textContent = new Date().getFullYear();
 
+// Lazy-load CV iframe when it enters the viewport
+const cvIframe = document.querySelector('.cv-viewer iframe[data-src]');
+if (cvIframe) {
+  const loadCv = () => {
+    if (!cvIframe.getAttribute('src')) {
+      cvIframe.setAttribute('src', cvIframe.getAttribute('data-src'));
+    }
+  };
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          loadCv();
+          observer.disconnect();
+        }
+      });
+    }, { rootMargin: '200px 0px' });
+
+    observer.observe(cvIframe);
+  } else {
+    // Fallback: load after first interaction
+    window.addEventListener('scroll', loadCv, { once: true, passive: true });
+  }
+}
 
 document.addEventListener('DOMContentLoaded', () => {
   const cards = document.querySelectorAll('[data-scroll]');
@@ -93,4 +118,3 @@ document.addEventListener('DOMContentLoaded', () => {
     update(); // initial
   });
 });
-
