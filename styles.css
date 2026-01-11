@@ -37,7 +37,7 @@ body{
 .sidebar{
   display:flex;
   flex-direction:column;
-  gap:24px;
+  gap:2px;
 }
 .profile.section{padding:0}
 .hero-left{
@@ -60,7 +60,8 @@ body{
 }
 
 @media (max-width: 900px){
-  .page-layout{grid-template-columns:1fr;gap:24px;padding:16px 0 24px}
+  .container{padding:0 14px}
+  .page-layout{grid-template-columns:1fr;gap:24px;padding:16px 14px 24px}
   .content{border-left:none;padding-left:0}
 }
 
