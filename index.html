@@ -72,7 +72,11 @@
         <!-- Scrollable card with visual affordances -->
         <div class="scroll-card" data-scroll>
           <!-- The UL is the actual scroller -->
-          <ul class="news-list">
+          <ul class="news-list news-list--collapsed">
+            <li>
+              <span class="news-date">[Jan, 2026]</span>
+              Joined <a href="https://mem0.ai/" target="_blank" rel="noopener"><strong>mem0</strong></a> as an <strong>Applied AI Research Intern</strong>.
+            </li>
             <li>
               <span class="news-date">[Sep, 2025]</span>
               Reviewer as <strong>Program Committee Member</strong> for
@@ -105,8 +109,8 @@
             </li>
             <li>
               <span class="news-date">[Aug, 2024]</span>
-              Started as <strong> Research Intern</strong> at Transportation Engineering Department, IIT Roorkee under
-              <a href=" https://scholar.google.com/citations?user=unUZoZAAAAAJ&hl=en" target="_blank" rel="noopener"> Prof. Pushpa Choudhary</a>.
+              Started as <strong>Research Intern</strong> at Transportation Engineering Department, IIT Roorkee under
+              <a href="https://scholar.google.com/citations?user=unUZoZAAAAAJ&hl=en" target="_blank" rel="noopener">Prof. Pushpa Choudhary</a>.
             </li>
             <li>
               <span class="news-date">[Aug, 2024]</span>
@@ -147,6 +151,7 @@
               <a href="https://uba.iitr.ac.in/" target="_blank" rel="noopener">Unnat Bharat Abhiyan, IIT Roorkee</a>.
             </li>
           </ul>
+          <button class="news-more" type="button" data-news-toggle>View all news</button>
         </div>
       </div>
     </section>
@@ -330,7 +335,7 @@
             <div class="item-meta">Bangalore · May–Aug 2025</div>
           </div>
         </div>
-        <p class="item-desc">Built multi-agent assistant for Swiggy Scenes using Cimba AI and LangGraph; integrated autonomous booking and CRM automation with Docker CI/CD deployment.</p>
+        <p class="item-desc">Built a multi-agent conversational recommender for Swiggy Scenes using LangGraph, Llama-2, and multimodal GraphRAG. Designed the LLM backend and lead-analytics pipeline (Firebase/Cloud Functions + Apify→Snowflake) with CRM automation.</p>
       </li>
       
       <li>
@@ -341,7 +346,7 @@
             <div class="item-meta">Remote (New Delhi) · Dec 2024–Apr 2025</div>
           </div>
         </div>
-        <p class="item-desc">Designed Hybrid-RAG multi-agent framework with CrewAI + LangGraph and RLHF-based agent pipelines on AWS EC2 clusters.</p>
+        <p class="item-desc">Built a startup copilot with multi-agent CUA workflows (CrewAI/LangGraph) and Hybrid-RAG with persona memory. Implemented RLHF-style evaluation and deployed scalable agent clusters on AWS (FastAPI + Celery).</p>
       </li>
       
       <li>
@@ -352,7 +357,7 @@
             <div class="item-meta">Remote (Florida US) · Mar–Apr 2025</div>
           </div>
         </div>
-        <p class="item-desc">Developed multi-agent onboarding assistant with GPT-4 Vision and OpenAI CUA; integrated RAG retrieval and real-time HCI automation.</p>
+        <p class="item-desc">Built a multi-agent onboarding assistant using GPT-4V + LangGraph with RAG for Microsoft Suite workflows. Orchestrated async agents with FastAPI/Celery + MongoDB Atlas and Selenium-based UI control.</p>
       </li>
 
       <li>
@@ -363,7 +368,7 @@
             <div class="item-meta">Roorkee · Aug 2024–Present </div>
           </div>
         </div>
-        <p class="item-desc">Developing Depth Estimation and Early collision warning system for Indian Traffic using 16-beam LiDAR and monocular RGB camera.</li>
+        <p class="item-desc">Depth estimation, early collision-warning system for Indian traffic using 16-beam LiDAR and monocular camera.</p>
       
       <li>
         <div class="exp-header">
@@ -373,7 +378,7 @@
             <div class="item-meta">Remote · Aug–Oct 2024</div>
           </div>
         </div>
-        <p class="item-desc">Built trajectory analysis for mining vehicles using RDP + DBSCAN for anomaly detection on large-scale GIS datasets.</p>
+        <p class="item-desc">Built telemetry analytics for mining fleets: fuel/dynamics modeling and anomaly detection at scale. Implemented RDP trajectory simplification + DBSCAN clustering pipelines.</p>
       </li>
       
       <li>
@@ -384,71 +389,74 @@
             <div class="item-meta">Gurgaon · Jun–Jul 2024</div>
           </div>
         </div>
-        <p class="item-desc">Developed Fleet Optimization tool using ML + Linear Programming (PuLP) for Hyderabad-ORR emergency response planning.</p>
+        <p class="item-desc">Built a fleet-optimization system using ML + linear programming (PuLP) for emergency response routing on Hyderabad-ORR. Delivered modular Python tooling adopted for expansion across national highways.</p>
       </li>
     </ul>
   </div>
 </section>
-
-<!-- PROJECTS -->
-<section id="projects" class="section">
-  <div class="container">
-    <h2>Projects</h2>
-    <div class="section-divider"></div>
-    <ul class="clean-list">
-      <li>
-        <div class="item-header">
-          <span class="item-title">ByeLabs | Local-First Multi-Agent AI for Roster Processing</span>
-          <a href="https://github.com/AGAMPANDEYY/ByeLabs" target="_blank" rel="noopener" class="inline-link">GitHub</a>
-          <span class="project-meta">Hi-Labs AIQuest Hackathon Finalist</span>
-        </div>
-      </li>
-      
-      <li>
-        <div class="item-header">
-          <span class="item-title">Multimodal Agentic GraphRAG (Zomato Nugget)</span>
-          <a href="https://github.com/AGAMPANDEYY/zomato_nugget" target="_blank" rel="noopener" class="inline-link">GitHub</a>
-        </div>
-        </li>
-      
-      <li>
-        <div class="item-header">
-          <span class="item-title">Spatiotemporal Attention for Trajectory Prediction</span>
-          <a href="https://github.com/AGAMPANDEYY/vehicle_trajectory_prediction" target="_blank" rel="noopener" class="inline-link">GitHub</a>
-        </div>
-        </li>
-      
-      <li>
-        <div class="item-header">
-          <span class="item-title">StegGNN: Graph Neural Network for Image Steganography</span>
-          <a href="https://github.com/AGAMPANDEYY/StegGNN" target="_blank" rel="noopener" class="inline-link">GitHub</a>
-          <a href="https://openreview.net/forum?id=UpCzCC4hCn" target="_blank" rel="noopener" class="inline-link">Paper</a>
-        </div>
-      </li>
-      
-      <li>
-        <div class="item-header">
-          <span class="item-title">Knowledge Graph Embeddings for GraphRAG LLMs</span>
-          <a href="https://github.com/dsgiitr/kge-clip" target="_blank" rel="noopener" class="inline-link">GitHub</a>
-          <a href="https://agam-pandey.gitbook.io/knowledge-graph-embedding-or-dsg-iitr/" target="_blank" rel="noopener" class="inline-link">GitBook</a>
-        </div>
-      </li>
-
-      <li>
-        <div class="item-header">
-          <span class="item-title">Tech Enhanced AI Interview Platform: Techshila IIT Roorkee</span>
-          <a href="https://github.com/AGAMPANDEYY/VQA_YOLO_Dsg" target="_blank" rel="noopener" class="inline-link">GitHub</a>
-        </div>
-      </li>
-
-      
-    </ul>
-  </div>
-</section>
-
 
   </div>
 </main>
+
+<!-- PROJECTS -->
+<section id="projects" class="section projects-section">
+  <div class="container">
+    <h2>Projects</h2>
+    <div class="section-divider"></div>
+
+    <div class="projects-grid">
+      <div class="projects-column">
+        <h3>Research Projects</h3>
+        <ul class="clean-list">
+          <li>
+            <div class="item-header">
+              <span class="item-title">StegGNN: Graph Neural Network for Image Steganography</span>
+              <a href="https://github.com/AGAMPANDEYY/StegGNN" target="_blank" rel="noopener" class="inline-link">GitHub</a>
+              <a href="https://openreview.net/forum?id=UpCzCC4hCn" target="_blank" rel="noopener" class="inline-link">Paper</a>
+            </div>
+          </li>
+          <li>
+            <div class="item-header">
+              <span class="item-title">Knowledge Graph Embeddings for GraphRAG LLMs</span>
+              <a href="https://github.com/dsgiitr/kge-clip" target="_blank" rel="noopener" class="inline-link">GitHub</a>
+              <a href="https://agam-pandey.gitbook.io/knowledge-graph-embedding-or-dsg-iitr/" target="_blank" rel="noopener" class="inline-link">GitBook</a>
+            </div>
+          </li>
+          <li>
+            <div class="item-header">
+              <span class="item-title">Spatiotemporal Attention for Trajectory Prediction</span>
+              <a href="https://github.com/AGAMPANDEYY/vehicle_trajectory_prediction" target="_blank" rel="noopener" class="inline-link">GitHub</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="projects-column">
+        <h3>Systems & Applied</h3>
+        <ul class="clean-list">
+          <li>
+            <div class="item-header">
+              <span class="item-title">ByeLabs: Local-First Multi-Agent AI for Roster Processing</span>
+              <a href="https://github.com/AGAMPANDEYY/ByeLabs" target="_blank" rel="noopener" class="inline-link">GitHub</a>
+            </div>
+          </li>
+          <li>
+            <div class="item-header">
+              <span class="item-title">Multimodal Agentic GraphRAG (Zomato Nugget)</span>
+              <a href="https://github.com/AGAMPANDEYY/zomato_nugget" target="_blank" rel="noopener" class="inline-link">GitHub</a>
+            </div>
+          </li>
+          <li>
+            <div class="item-header">
+              <span class="item-title">Tech Enhanced AI Interview Platform: Techshila IIT Roorkee</span>
+              <a href="https://github.com/AGAMPANDEYY/VQA_YOLO_Dsg" target="_blank" rel="noopener" class="inline-link">GitHub</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
 <footer class="site-footer">
   <div class="container footer-inner">
