@@ -93,13 +93,3 @@ document.addEventListener('DOMContentLoaded', () => {
     update(); // initial
   });
 });
-
-// Toggle full news list in the sidebar
-const newsToggle = document.querySelector('[data-news-toggle]');
-const newsList = document.querySelector('.news-list');
-if (newsToggle && newsList) {
-  newsToggle.addEventListener('click', () => {
-    const isCollapsed = newsList.classList.toggle('news-list--collapsed');
-    newsToggle.textContent = isCollapsed ? 'View all news' : 'Show less';
-  });
-}
