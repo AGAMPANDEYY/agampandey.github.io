@@ -92,4 +92,13 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', update);
     update(); // initial
   });
+
+  // Fade in lazy-loaded images when they finish loading
+  document.querySelectorAll('img.lazy-img').forEach(img => {
+    if (img.complete) {
+      img.classList.add('is-loaded');
+      return;
+    }
+    img.addEventListener('load', () => img.classList.add('is-loaded'), { once: true });
+  });
 });
