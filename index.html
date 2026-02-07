@@ -20,15 +20,14 @@
         <a class="btn btn-outline btn-small" href="assets/AgamPandey_CV.pdf" download>Download CV</a>
       </div>
     </div>
-    <button class="nav-toggle" aria-label="Open navigation" title="Menu">☰</button>
-    <ul class="nav-links">
+    <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation" title="Menu">☰</button>
+    <ul class="nav-links" id="primary-navigation">
       <li><a href="#about" class="nav-link">About</a></li>
       <li><a href="#publications" class="nav-link">Publications</a></li>
       <li><a href="#experience" class="nav-link">Experience</a></li>
       <li><a href="#projects" class="nav-link">Projects</a></li>
       <li><a href="#awards" class="nav-link">Extra Curricular</a></li>
-       <li><a href="#news" class="nav-link">News</a></li>
-      <li><a href="assets/AgamPandey_CV.pdf" class="nav-link" download>Download CV</a></li>
+      <li><a href="#news" class="nav-link">News</a></li>
     </ul>
   </nav>
 </header>
@@ -55,7 +54,7 @@
       </div>
 
       <p>  
-      Hi! I’m Agam Pandey, a final-year undergrad at <a href="https://www.iitr.ac.in/">IIT Roorkee</a> and i work in turning research into reliable and practical AI systems. I work in AI Safety, Robustness and Interpretability in Multimodal models, Causal Reasoning in VLMs, Adversarial ML, Graph Embeddings for retrievals, AI Agents and Computer Vision for Autonomous Perception. In the past i have worked on both Data Science algorithms, desiging and building complex AI Systems during internships at <a href="https://www.swiggy.com/">Swiggy</a>, <a href="https://akki.ai/">Akki AI</a>, <a href="https://www.ezaix.com/">EzAIx</a>, <a href="https://www.mindshiftnow.in/">Mindshift Analytics</a> and <a href="https://efkonindia.com/">Strabag Efkon India</a> , while co-authoring work at <a href="https://neurips.cc/virtual/2025/workshop/109580">NeurIPS-RML</a>/<a href="https://reproml.org/">MLRC</a>/<a href="https://jmlr.org/tmlr/">TMLR</a>/<a href="https://aaai.org/conference/aaai/aaai-26/student-abstract-and-poster-program-call/">AAAI-SAPP</a>. I am also a Research Intern at Transportation Lab, IIT Jodhpur supervised by <a href="https://scholar.google.com/citations?user=C8hmPlQAAAAJ&hl=en">Prof. Akshay Gupta</a> working on Multimodal Sensor Fusion and Collsion Warning systems. When I’m not coding or researching, you’ll find me running 1500m, 5000m and marathons for <a href="https://www.instagram.com/athletics_iitr/?hl=en"> Athletics Team IIT Roorkee </a> or contributing to student tech group, <a href="https://dsgiitr.in/">Data Science Group</a>.
+      Hi! I’m Agam Pandey, a senior undergrad at <a href="https://www.iitr.ac.in/">IIT Roorkee</a>. I do applied AI research on production AI systems: information retrieval, Evals and benchmarking, and multimodal safety/robustness (VLM reasoning, adversarial ML, agents, and vision). I’m currently an Applied AI Research Intern at <a href="https://mem0.ai/" target="_blank" rel="noopener">mem0</a> and previously built data/AI systems at <a href="https://www.swiggy.com/">Swiggy</a>, <a href="https://akki.ai/">Akki AI</a>, <a href="https://www.ezaix.com/">EzAIx</a>, <a href="https://www.mindshiftnow.in/">Mindshift Analytics</a>, and <a href="https://efkonindia.com/">Strabag Efkon India</a>, while co-authoring work at <a href="https://neurips.cc/virtual/2025/workshop/109580">NeurIPS-RML</a>/<a href="https://reproml.org/">MLRC</a>/<a href="https://jmlr.org/tmlr/">TMLR</a>/<a href="https://aaai.org/conference/aaai/aaai-26/student-abstract-and-poster-program-call/">AAAI-SAPP</a>. I’m also a Research Intern at Transportation Lab, IIT Jodhpur with <a href="https://scholar.google.com/citations?user=C8hmPlQAAAAJ&hl=en">Prof. Akshay Gupta</a> on multimodal sensor fusion and collision-warning systems. Outside work, I run middle/long distance for <a href="https://www.instagram.com/athletics_iitr/?hl=en">Athletics Team IIT Roorkee</a> and contribute to <a href="https://dsgiitr.in/">Data Science Group</a>.
       </p>
 
       </div>
@@ -287,7 +286,9 @@
             <!-- <img src="assets/pubs/transpatch.webp" alt="TransPatch universal adversarial patch figure" class="lazy-img" loading="lazy" decoding="async"> -->
           </a>
           <div class="pub-body">
-            <h4 class="pub-title">TransPatch: Learning a Universal Adversarial Patch for ViT–CNN Cross-Architecture Transfer in Semantic Segmentation
+            <h4 class="pub-title">
+              TransPatch: Learning a Universal Adversarial Patch for ViT–CNN Cross-Architecture Transfer in Semantic Segmentation
+            </h4>
             <div class="pub-meta">
               <span class="pub-venue">AAAI-26 Student Abstract</span>
             </div>
@@ -360,11 +361,11 @@
           <!-- <img src="assets/logos/iitr_logo.svg" alt="IITR Transportation Dept" class="company-logo lazy-img" loading="lazy" decoding="async"> -->
           <div class="exp-title-group">
             <div class="item-title">Research Intern | <a href="https://www.iitr.ac.in/" target="_blank" rel="noopener">Transportation Department, IIT Roorkee</a></div>
-            <div class="item-meta">Roorkee · Aug 2024–Present </div>
+            <div class="item-meta">Roorkee · Aug 2024–Present</div>
           </div>
         </div>
         <p class="item-desc">Depth estimation, early collision-warning system for Indian traffic using 16-beam LiDAR and monocular camera.</p>
-      
+      </li>
       <li>
         <div class="exp-header">
           <!-- <img src="assets/logos/mindshift.webp" alt="Mindshift Analytics" class="company-logo lazy-img" loading="lazy" decoding="async"> -->
@@ -466,6 +467,6 @@
   </div>
 </footer>
 
-<script src="script.js"></script>
+<script src="script.js" defer></script>
 </body>
 </html>
