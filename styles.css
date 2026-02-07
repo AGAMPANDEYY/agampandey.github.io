@@ -56,14 +56,46 @@ a:focus-visible,
   display:flex;
   flex-direction:column;
   gap:2px;
+  position:relative;
 }
-.profile.section{padding:0}
+.profile.section{
+  padding:0;
+  position:relative;
+  overflow:hidden;
+}
 .hero-left{
   display:flex;
   flex-direction:column;
   align-items:flex-start;
   gap:6px;
   text-align:left;
+  position: relative;
+  padding-top: 20px;
+  width:100%;
+}
+.hero-left::before{
+  content:'';
+  position:absolute;
+  top:-20px;
+  left:-20px;
+  right:-20px;
+  height:200px;
+  background:linear-gradient(135deg,
+    rgba(30,58,138,0.09) 0%,
+    rgba(6,182,212,0.12) 50%,
+    rgba(30,58,138,0.06) 100%
+  );
+  border-radius:16px;
+  z-index:-1;
+  filter:blur(40px);
+  opacity:.8;
+}
+
+@media (max-width: 900px){
+  .hero-left::before{
+    left:-14px;
+    right:-14px;
+  }
 }
 .hero-left p{margin-top:6px}
 .hero-subline{
@@ -85,7 +117,7 @@ a:focus-visible,
 
 h1,h2,h3{
   color:var(--accent);
-  margin:0 0 20px 0;
+  margin:0 0 6px 0;
   line-height:1.2;
   font-family:Georgia,"Times New Roman",Times,serif;
 }
@@ -99,7 +131,7 @@ h3{font-size:1.1rem;font-weight:600;margin-bottom:12px;letter-spacing:.2px}
   width:62%;
   max-width:360px;
   background:linear-gradient(90deg,var(--divider-start),var(--divider-end));
-  margin:1px 0 6px;
+  margin:1px 0 10px;
   border-radius:999px;
   opacity:.85;
 }
@@ -209,27 +241,64 @@ h3{font-size:1.1rem;font-weight:600;margin-bottom:12px;letter-spacing:.2px}
 .social-text{
   display:flex;
   align-items:center;
-  gap:6px;
+  gap:10px;
   flex-wrap:wrap;
   font-size:.84rem;
   color:#7a7a7a;
 }
 .hero-divider{
-  color:#b5b5b5;
-  font-size:.9rem;
+  display:none;
 }
 .social-text a{
   color:var(--muted);
   text-decoration:none;
-  border-bottom:1px solid transparent;
+  border-bottom:0;
 }
 .social-text a:hover{
   color:var(--accent);
-  border-bottom-color:rgba(6,182,212,0.45);
 }
-.social-text span{
-  color:#b5b5b5;
+.social-icon{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:34px;
+  height:34px;
+  border-radius:8px;
+  background:transparent;
+  border:1px solid transparent;
+  transition:all .2s ease;
 }
+.social-icon svg{
+  width:20px;
+  height:20px;
+  display:block;
+  transition:all .2s ease;
+}
+.social-icon:hover{
+  transform:translateY(-2px);
+  box-shadow:0 4px 12px rgba(0,0,0,0.15);
+  border-color:transparent;
+}
+.social-icon.gmail:hover{
+  background:#F36C61;
+}
+.social-icon.gmail:hover svg path{ fill:#fff; }
+.social-icon.scholar:hover{
+  background:#6AA6FF;
+}
+.social-icon.scholar:hover svg path{ fill:#fff; }
+.social-icon.github:hover{
+  background:#4A4A4A;
+}
+.social-icon.github:hover svg path{ fill:#fff; }
+.social-icon.linkedin:hover{
+  background:#3A8AD6;
+}
+.social-icon.linkedin:hover svg path{ fill:#fff; }
+.social-icon.x:hover{
+  background:#4A4A4A;
+}
+.social-icon.x:hover svg path{ fill:#fff; }
 
 .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px}
 .cta-center{ justify-content:center; }
@@ -333,7 +402,7 @@ h3{font-size:1.1rem;font-weight:600;margin-bottom:12px;letter-spacing:.2px}
   font-weight:400;
 }
 .awards-list{
-  gap:12px;
+  gap:16px;
 }
 .awards-list .item-desc{
   margin:4px 0;
@@ -356,19 +425,22 @@ h3{font-size:1.1rem;font-weight:600;margin-bottom:12px;letter-spacing:.2px}
 
 /* Experience with company logos */
 .experience-list li{
-  gap:12px;
+  display:grid;
+  grid-template-columns:40px 1fr;
+  column-gap:12px;
+  row-gap:0;
+  align-items:start;
 }
 
-.exp-header{
-  display:flex;
-  align-items:flex-start;
-  gap:14px;
-  margin-bottom:8px;
+.experience-list .exp-header{
+  display:contents;
 }
 
-.company-logo{
-  width:48px;
-  height:48px;
+.experience-list .company-logo{
+  grid-column:1;
+  grid-row:1 / span 2;
+  width:40px;
+  height:40px;
   object-fit:contain;
   border-radius:8px;
   border:1px solid var(--border);
@@ -377,12 +449,107 @@ h3{font-size:1.1rem;font-weight:600;margin-bottom:12px;letter-spacing:.2px}
   flex-shrink:0;
 }
 
-.exp-title-group{
-  flex:1;
+.experience-list .exp-title-group{
+  grid-column:2;
+  grid-row:1;
   display:flex;
   flex-wrap:wrap;
   align-items:baseline;
-  gap:10px 16px;
+  gap:0 16px;
+  justify-content:space-between;
+  margin-bottom:4px;
+}
+
+.experience-list .item-title{
+  margin:0;
+  line-height:1.3;
+}
+
+.experience-list .item-meta{
+  margin:0;
+  line-height:1.3;
+  margin-left:auto;
+  text-align:right;
+}
+
+.experience-list .item-desc{
+  grid-column:2;
+  grid-row:2;
+  margin:0;
+  padding:0;
+  line-height:1.45;
+}
+
+@media (max-width: 600px){
+  .experience-list li{
+    grid-template-columns:36px 1fr;
+    column-gap:10px;
+  }
+  .experience-list .company-logo{
+    width:36px;
+    height:36px;
+    padding:4px;
+  }
+}
+
+/* Awards / Off the Clock - tight layout */
+.awards-list li{
+  display:grid;
+  grid-template-columns:40px 1fr;
+  column-gap:12px;
+  row-gap:0;
+  align-items:start;
+}
+.awards-list .exp-header{
+  display:contents;
+}
+.awards-list .company-logo{
+  grid-column:1;
+  grid-row:1 / span 2;
+  width:40px;
+  height:40px;
+  object-fit:contain;
+  border-radius:8px;
+  border:1px solid var(--border);
+  padding:6px;
+  background:#fff;
+  flex-shrink:0;
+}
+.awards-list .exp-title-group{
+  grid-column:2;
+  grid-row:1;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:baseline;
+  gap:0 12px;
+  margin-bottom:4px;
+}
+.awards-list .item-title{
+  margin:0;
+  line-height:1.3;
+}
+.awards-list .item-meta{
+  margin:0;
+  line-height:1.3;
+}
+.awards-list .item-desc{
+  grid-column:2;
+  grid-row:2;
+  margin:0;
+  padding:0;
+  line-height:1.45;
+}
+
+@media (max-width: 600px){
+  .awards-list li{
+    grid-template-columns:36px 1fr;
+    column-gap:10px;
+  }
+  .awards-list .company-logo{
+    width:36px;
+    height:36px;
+    padding:4px;
+  }
 }
 
 
