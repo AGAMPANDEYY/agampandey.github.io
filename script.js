@@ -6,18 +6,23 @@ if (toggle) {
     toggle.setAttribute('aria-expanded', String(isExpanded));
   };
 
-  // Keep aria-expanded in sync with current state
-  const syncExpanded = () => {
+  const handleResize = () => {
+    const isDesktop = window.matchMedia('(min-width: 900px)').matches;
+    if (isDesktop) {
+      links?.classList.remove('open');
+      setExpanded(false);
+      return;
+    }
     setExpanded(links?.classList.contains('open'));
   };
 
   toggle.addEventListener('click', () => {
     links?.classList.toggle('open');
-    syncExpanded();
+    setExpanded(links?.classList.contains('open'));
   });
 
-  window.addEventListener('resize', syncExpanded);
-  window.addEventListener('load', syncExpanded);
+  window.addEventListener('resize', handleResize);
+  window.addEventListener('load', handleResize);
 }
 
 // Smooth scroll for anchor links
@@ -27,7 +32,8 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     const el = document.getElementById(id);
     if (el) {
       e.preventDefault();
-      const headerOffset = 56;
+      const header = document.querySelector('.site-header');
+      const headerOffset = header ? header.offsetHeight : 0;
       const elementPosition = el.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
       
