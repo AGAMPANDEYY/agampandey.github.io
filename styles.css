@@ -279,6 +279,9 @@ h3{font-size:1.1rem;font-weight:600;margin-bottom:12px;letter-spacing:.2px}
   line-height:1.65;
   max-width:65ch;
 }
+.experience-list .item-desc{
+  max-width:none;
+}
 
 /* Links in items */
 .item-links{
@@ -376,6 +379,10 @@ h3{font-size:1.1rem;font-weight:600;margin-bottom:12px;letter-spacing:.2px}
 
 .exp-title-group{
   flex:1;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:baseline;
+  gap:10px 16px;
 }
 
 
