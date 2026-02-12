@@ -424,6 +424,9 @@ h3{font-size:1.1rem;font-weight:600;margin-bottom:12px;letter-spacing:.2px}
 }
 
 /* Experience with company logos */
+.experience-list{
+  gap:28px;
+}
 .experience-list li{
   display:grid;
   grid-template-columns:40px 1fr;
